@@ -1,0 +1,45 @@
+
+.group-item {
+    border: 1px solid #ccc; 
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+  }
+  
+  .group-name {
+    display: flex;
+    align-items: center;
+  }
+  
+  .group-avatar {
+    margin-right: 10px;
+   
+  }
+  
+  .group-avatar-none {
+   font-size:15px;
+   margin-right: 5px;
+  }
+  
+  .name {
+    font-weight: bold;
+  }
+  
+  .group-status {
+    margin-top: 5px;
+    font-style: italic;
+  }
+  
+  .friends-count {
+    color: #0066cc; 
+    cursor: pointer;
+  }
+  
+  .friend-list {
+    margin-top: 10px;
+  }
+  
+  .friend-item {
+    margin-bottom: 5px;
+  }
+  
