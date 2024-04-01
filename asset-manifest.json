@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-vk-groups/static/css/main.45352565.css",
+    "main.js": "/react-vk-groups/static/js/main.1b6a2b4d.js",
+    "index.html": "/react-vk-groups/index.html",
+    "main.45352565.css.map": "/react-vk-groups/static/css/main.45352565.css.map",
+    "main.1b6a2b4d.js.map": "/react-vk-groups/static/js/main.1b6a2b4d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45352565.css",
+    "static/js/main.1b6a2b4d.js"
+  ]
+}
