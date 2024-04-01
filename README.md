@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Тестовое в вк 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Создайте простое react приложение, состоящее из одной страницы, которое при открытии будет запрашивать список групп с backend (замокайте ответ метода данными из файла groups.json).
 
-In the project directory, you can run:
+Типизация ответа метода получения групп GetGroupsResponse:
+```ts
+interface GetGroupsResponse {
+  result: 1 | 0,
+  data?: Group[]
+}
 
-### `npm start`
+interface Group {
+  "id": number,
+  "name": string,
+  "closed": boolean,
+  "avatar_color"?: string,
+  "members_count": number,
+  "friends"?: User[]
+}
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+interface User {
+  "first_name": string,
+  "last_name": string
+}
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Группа может быть закрытой или открытой.
 
-### `npm test`
+Группа может иметь аватарку в виде круга диаметром 100px с заливкой цветом, указанным в атрибуте avatar_color.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Группа может содержать список ваших друзей, состоящих в ней.
 
-### `npm run build`
+После получения списка всех групп отобразите список на странице в произвольном виде. Отобразите в интерфейсе имя группы, аватарку, тип приватности (закрытая / открытая), кол-во подписчиков и кол-во друзей.
+При клике на кол-во друзей в блоке группы должен появиться блок с именем и фамилией каждого из друзей.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Если данных для отображения какого-то поля нет, его рисовать не нужно.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Над списком групп должен быть набор фильтров, позволяющий выбрать только нужные нам группы.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Мы должны иметь возможность отфильтровать группы по типу приватности (все / закрытая / открытая), по цвету аватарки (любой / все возможные значения из атрибута avatar_color), наличию друзей в группе
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Результатом тестового задания будет являться проект, доступный по ссылке для проверки. CSS оцениваться не будет, можно не обращать внимание на визуальную составляющую.
